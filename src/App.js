@@ -1,18 +1,22 @@
 import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Route , Routes } from 'react-router-dom';
 import './App.css';
-import Navbar from './nav-bar.js';
-import Landing from './LandingPage.js'
+import Navbar from './components/Nav-bar';
+import Landing from './components/HomePage';
+import Notes from './components/Notes';
+import About from './components/About';
 
 function App() {
-  return (
+      return (
     <Router>
-      <div>
-        <Navbar />
-        <Landing />
-      </div>
+      <Navbar />
+      <Routes>
+        <Route path= "/*" element = {<Landing /> } />
+        <Route path="/notes" element={<Notes />} />
+        <Route path="about" element = {<About/>} />
+      </Routes>
     </Router>
   );
-} 
+}
 
 export default App;
