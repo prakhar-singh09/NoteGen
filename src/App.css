@@ -37,14 +37,26 @@
 }
 
 .heading{
-  font-size: 75px;
-  padding: 50px 140px;
-  font-weight: 620 ;
+ font-size: 75px;
+ align-items: center;  
+ margin-top: 100px;
+ margin-left: 40px;
+ font-weight: 600;
 }
 
-.subHeading{
-  font-size: 35px;
-  padding-left:140px;
-  margin-top: 0%;
-  ;
+.subheading{
+  font-size: 31px;
+  font-weight: 400;
+  margin-left: 40px;
+
+  
+}
+
+.subheading1{
+  margin-left: 40px;
+  font-size: 16px;
+}
+
+.img1{
+  margin-top: 100px;
 }
