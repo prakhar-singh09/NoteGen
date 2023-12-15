@@ -21,9 +21,9 @@ const About = () => {
          </Col>
          <Col><img className ="img3" src={img3} alt="Logo" /></Col>
       </Row>
-      <Row>
-         
-         </Row>
+     <footer>
+      <h1>hello</h1>
+     </footer>
     </Container>
     </>
    )

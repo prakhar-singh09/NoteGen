@@ -9,7 +9,7 @@ function NavScrollExample() {
     <Navbar  expand="lg" className="bg-body-tertiary">
       <Container fluid>
       <LinkContainer to = "/"> 
-       <Navbar.Brand>NotesApp</Navbar.Brand>
+       <Navbar.Brand className='brand'>NotesApp</Navbar.Brand>
       </LinkContainer>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
