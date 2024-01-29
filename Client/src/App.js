@@ -8,7 +8,7 @@ import HomePage from './components/HomePage';
 import Notes from './components/Notes';
 import About from './components/About';
 import Login from './components/Login';
-import Signup from './components/Signup.js'
+import Signup from './components/Signup'
 
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
         <Route path="/Notes" element={<Notes />} />
         <Route path="/About" element={<About />} />
         <Route path="/Login" element={<Login />} />
-        <Route path="/Signup" element={<Signup />} />
+        <Route path="/Signup" element={<Signup />} />        
       </Routes>
     </Router>
   );
