@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import alertContext from '../context/alerts/alertContext';
+import alertContext from '../context/Alert/alertContext';
 
 function Alert(props) {
     // Get the alert data from the alertContext

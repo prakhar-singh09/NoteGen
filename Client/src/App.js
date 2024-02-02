@@ -11,7 +11,7 @@ import Login from './components/Login';
 import Signup from './components/Signup'
 import Alert from './components/Alert';
 import NoteState from './context/Notes/NoteState';
-import AlertState from './context/alerts/AlertState';
+import AlertState from './context/Alert/AlertState';
 
 
 function App() {
