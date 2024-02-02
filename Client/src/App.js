@@ -9,12 +9,18 @@ import Notes from './components/Notes';
 import About from './components/About';
 import Login from './components/Login';
 import Signup from './components/Signup'
+import Alert from './components/Alert';
+import NoteState from './context/Notes/NoteState';
+import AlertState from './context/alerts/AlertState';
 
 
 function App() {
   return (
+  <AlertState>
+   <NoteState>
     <Router>
       <Navbar />
+      <Alert/>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/Notes" element={<Notes />} />
@@ -23,6 +29,8 @@ function App() {
         <Route path="/Signup" element={<Signup />} />        
       </Routes>
     </Router>
+    </NoteState>
+  </AlertState>
   );
 }
 
