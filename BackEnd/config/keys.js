@@ -1,5 +1,4 @@
 module.exports = {
-    JWT_SECRET: "Prakhar123",
-    MONGOURI: "mongodb://0.0.0.0:27017",
-    REACT_APP_API_URL: "http://localhost:5000/"
+    JWT_SECRET: process.env.JWT_SECRET,
+    MONGOURI: process.env.MONGO_URI,
 }
