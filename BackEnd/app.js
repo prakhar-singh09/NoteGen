@@ -1,15 +1,26 @@
+const connectToMongo = require('./db');
 const express = require('express');
-const mongoose = require('mongoose');
+const cors = require('cors');
+const {authRoute} = require('./routes/auth');
+const {noteRoute} = require('./routes/notes');
+const PORT = 5000;
 
+require('dotenv').config()
+
+connectToMongo();
 
 const app = express();
 
-app.get('/api/users',(req,res)=>{
-    res.send("hello");
-});
+app.use(cors());
 
-app.get('/',(req,res)=>{
-    res.send("hello");
-});
+app.use(express.json());
 
-app.listen(5500, ()=> console.log('Server is running on port 5500'));
+app.use('/api/auth',require('./routes/auth'));
+app.use('/api/notes',require('./routes/notes'));
+
+if (PORT) {
+    app.listen(PORT, () => {
+        console.log(`Listening on port http://localhost:${PORT}`);
+    });
+}
+module.exports = app;

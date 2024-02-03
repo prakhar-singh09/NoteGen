@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const { MONGOURI } = require('./config/keys');
+const { MONGOURI } = require('../config/keys');
 const connectToMongo = async () => {
     try {
         mongoose.set('strictQuery', false);

@@ -1,10 +1,8 @@
 import { useContext, useState } from "react";
-import React from "react";
-import { Container, Row, Col, Button, Form } from "react-bootstrap";
+import { Link, useNavigate } from "react-router-dom"
 import alertContext from "../context/Alert/alertContext";
+import signupimg from './assets/signup.svg'
 import { RiEyeFill, RiEyeOffFill } from 'react-icons/ri';
-import img5 from './assets/signup.svg';
-import { Link, useNavigate} from "react-router-dom";
 
 const Signup = () => {
     // State to toggle password visibility
@@ -15,7 +13,6 @@ const Signup = () => {
     const [credentials, setCredentials] = useState({ name: "", email: "", password: "", confirmPassword: "" });
     // Navigate to other pages after successful registration
     let navigate = useNavigate();
-
     // Function to toggle password visibility
     const togglePasswordVisibility = () => {
         setShowPassword(!showPassword);
@@ -35,7 +32,7 @@ const Signup = () => {
             return;
         }
         // Store the API endpoint in the host constant
-        const host = 'http://localhost:5000/';
+        const host = "http://localhost:5000/";
 
         // Make API call to register the user
         const response = await fetch(`${host}api/auth/createuser`, {
@@ -59,60 +56,121 @@ const Signup = () => {
         }
     }
     return (
-        <Container>
-            <Row className="align-items-center">
-                <Col xs={5}>
-                    <img className="img5" src={img5} alt="signup" />
-                </Col>
-                <Col>
-                    <h2 style={{ marginBottom: '20px', color: "orange" }}>Create a new account</h2>
+        <div>
+            <div className="container">
+                {/* Signup form */}
+                <div className="row py-5 mt-4 align-items-center">
+                    <div className="col-md-5 pr-lg-5 mb-5 mb-md-0">
+                        <img
+                            src={signupimg}
+                            className="img-fluid mb-3 d-none d-md-block"
+                            alt=""
+                        />
+                    </div>
 
-                    <Form onSubmit={handleSubmit}>
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
-                            <Form.Control size="lg" type="name" placeholder="Name"  onChange={onChange}
-                                    required />
-                        </Form.Group>
-
-                        <Form.Group className="mb-3" controlId="formBasicPassword">
-                            <Form.Control size="lg" type="email" placeholder="Email Address" onChange={onChange} required />
-                        </Form.Group>
-
-                        
-
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
-                            <Form.Control size="lg" type="Password" placeholder="Password" onChange={onChange} minLength={5} required/>
-                        </Form.Group>
-                       
-                         {/* Password visibility toggle button */}
-                         <span
-                                    className="password-toggle-icon"
-                                    onClick={togglePasswordVisibility}>
-                                    {showPassword ? <RiEyeOffFill /> : <RiEyeFill />}
-                        </span>
-
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
-                            <Form.Control size="lg" type="Confirm Password" placeholder="Confirm Password"   onChange={onChange}
+                    {/* Signup form fields */}
+                    <div className="col-md-6 col-lg-5">
+                        <h2
+                            className="mb-4"
+                            style={{ color: "#9C27B0", fontWeight: "Bold" }}
+                        >
+                            Create a new account
+                        </h2>
+                        <form onSubmit={handleSubmit}>
+                            {/* Name input field */}
+                            <div className="form-outline mb-4 material-textfield">
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    className="form-control form-control-lg"
+                                    placeholder=" "
+                                    onChange={onChange}
                                     required
-                                    minLength={5} />
-                        </Form.Group>
+                                />
+                                <label className="form-label" htmlFor="name">
+                                    Name
+                                </label>
+                            </div>
 
-                        <div className="text-center mt-4 pt-2 ">
-                            <Button className="login" size='lg' variant="primary " style={{ paddingLeft: "2.5rem", paddingRight: "2.5rem" }} type="submit">
-                                SignUp
-                            </Button>
+                            {/* Email input field */}
+                            <div className="form-outline mb-4 material-textfield">
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    className="form-control form-control-lg"
+                                    placeholder=" "
+                                    onChange={onChange}
+                                    required
+                                />
+                                <label className="form-label" htmlFor="email">
+                                    Email address
+                                </label>
+                            </div>
 
-                            <p className="small fw-bold mt-2 pt-1 mb-0">
-                                Already registered?{" "}
-                                <Link to="/Login" className="link-danger">
-                                    Login
-                                </Link>
-                            </p>
-                        </div>
-                    </Form>
-                </Col>
-            </Row>
-        </Container>
+                            {/* Password input field */}
+                            <div className="form-outline mb-3 material-textfield">
+                                <input
+                                    type={showPassword ? "text" : "password"}
+                                    id="password"
+                                    name="password"
+                                    className="form-control form-control-lg"
+                                    placeholder=" "
+                                    onChange={onChange}
+                                    required
+                                    minLength={5}
+                                />
+                                <label className="form-label" htmlFor="password">
+                                    Password
+                                </label>
+                                {/* Password visibility toggle button */}
+                                <span
+                                    className="password-toggle-icon"
+                                    onClick={togglePasswordVisibility}
+                                >
+                                    {showPassword ? <RiEyeOffFill /> : <RiEyeFill />}
+                                </span>
+                            </div>
+
+                            {/* Confirm Password input field */}
+                            <div className="form-outline mb-3 material-textfield">
+                                <input
+                                    type="password"
+                                    id="confirmPassword"
+                                    name="confirmPassword"
+                                    className="form-control form-control-lg"
+                                    placeholder=" "
+                                    onChange={onChange}
+                                    required
+                                    minLength={5}
+                                />
+                                <label className="form-label" htmlFor="confirmPassword">
+                                    Confirm Password
+                                </label>
+                            </div>
+
+                            {/* Signup button and Login link */}
+                            <div className="text-center mt-4 pt-2">
+                                <button
+                                    type="submit"
+                                    className="btn btn-primary btn-lg mb-3"
+                                    style={{ paddingLeft: "2.5rem", paddingRight: "2.5rem" }}
+                                >
+                                    SignUp
+                                </button>
+                                <p className="small fw-bold mt-2 pt-1 mb-0">
+                                    Already registered?{" "}
+                                    <Link to="/login" className="link-danger">
+                                        Login
+                                    </Link>
+                                </p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     );
-};
-
-export default Signup;
+}
+export default Signup
