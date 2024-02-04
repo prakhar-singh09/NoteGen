@@ -1,4 +1,4 @@
 module.exports = {
     JWT_SECRET: process.env.JWT_SECRET,
-    MONGOURI: process.env.MONGO_URI,
+    MONGOURI: "mongodb+srv://singhprakhar359:rseymaSAVeJju6I6@cluster0.ychadpx.mongodb.net/?retryWrites=true&w=majority",
 }
