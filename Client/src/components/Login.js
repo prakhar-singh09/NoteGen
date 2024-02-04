@@ -1,3 +1,4 @@
+import React from 'react';
 import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom"
 import alertContext from "../context/Alert/alertContext";
@@ -109,7 +110,7 @@ const Login = () => {
 
                                 {/* Signup link */}
                                 <p className="small fw-bold mt-2 pt-1 mb-0">
-                                    Don't have an account?{" "}
+                                    Don&apos;t have an account?{" "}
                                     <Link to="/signup" className="link-danger">
                                         Register
                                     </Link>

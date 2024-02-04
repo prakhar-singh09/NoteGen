@@ -1,4 +1,6 @@
-import { useState } from "react";
+/* eslint-disable react/prop-types */
+
+import React, { useState } from "react";
 import NoteContext from "./noteContext";
 
 const NoteState = (props) => {
@@ -45,6 +47,7 @@ const NoteState = (props) => {
     // Create a function 'deleteNote' to delete a note from the server
     const deleteNote = async (id) => {
         // API CALL
+        // eslint-disable-next-line 
         const response = await fetch(`${host}api/notes/deletenote/${id}`, {
             method: "DELETE",
             headers: {
@@ -60,6 +63,7 @@ const NoteState = (props) => {
     // Create a function 'editNote' to edit a note on the server
     const editNote = async (id, title, description, tag) => {
         //API CALL
+        // eslint-disable-next-line 
         const response = await fetch(`${host}api/notes/updatenote/${id}`, {
             method: "PUT",
             headers: {

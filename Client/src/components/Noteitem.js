@@ -1,4 +1,5 @@
-import { useContext } from "react";
+/* eslint-disable react/prop-types */
+import React, { useContext } from "react";
 import NoteContext from "../context/Notes/noteContext";
 import alertContext from "../context/Alert/alertContext";
 
