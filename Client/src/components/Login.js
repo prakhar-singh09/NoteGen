@@ -20,7 +20,7 @@ const Login = () => {
     }
 
     // Store the API endpoint in the host constant
-    const host = "http://localhost:5000/";
+    const host = process.env.API_URL;
 
     const handleSubmit = async (e) => {
         e.preventDefault();
