@@ -32,7 +32,7 @@ const Signup = () => {
             return;
         }
         // Store the API endpoint in the host constant
-        const host = process.env.API_URL;
+        const host = process.env.REACT_APP_URL;
 
         // Make API call to register the user
         const response = await fetch(`${host}api/auth/createuser`, {

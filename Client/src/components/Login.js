@@ -21,7 +21,7 @@ const Login = () => {
     }
 
     // Store the API endpoint in the host constant
-    const host = process.env.API_URL;
+    const host = process.env.REACT_APP_URL;
 
     const handleSubmit = async (e) => {
         e.preventDefault();
