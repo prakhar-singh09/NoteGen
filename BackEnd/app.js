@@ -3,7 +3,6 @@ const express = require('express');
 const cors = require('cors');
 const {authRoute} = require('./routes/auth');
 const {noteRoute} = require('./routes/notes');
-const PORT = 5500;
 require('dotenv').config()
 
 connectToMongo();
@@ -18,8 +17,8 @@ app.use('/api/auth',require('./routes/auth'));
 app.use('/api/notes',require('./routes/notes'));
 
 if (process.env.PORT) {
-    app.listen(PORT, () => {
-        console.log(`Listening on port http://localhost:${PORT}`);
+    app.listen(process.env.PORT, () => {
+        console.log(`Listening on port http://localhost:${process.env.PORT}`);
     });
 }
 module.exports = app;
