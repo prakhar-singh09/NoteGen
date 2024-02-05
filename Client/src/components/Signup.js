@@ -72,7 +72,7 @@ const Signup = () => {
                     <div className="col-md-6 col-lg-5">
                         <h2
                             className="mb-4"
-                            style={{ color: "#9C27B0", fontWeight: "Bold" }}
+                            style={{ color: "darkred", fontWeight: "Bold" }}
                         >
                             Create a new account
                         </h2>

@@ -2,8 +2,7 @@ import React from "react"
 import { useContext, useState } from "react";
 import NoteContext from "../context/Notes/noteContext";
 import alertContext from "../context/Alert/alertContext";
-import {Container,Row,Col,Button,Form} from 'react-bootstrap';
-import img2 from './assets/img2.svg';
+import addnoteimg from './assets/img2.svg'
 
 const AddNote = () => {
     const { addNote } = useContext(NoteContext); // get the addNote function from the note context
@@ -25,38 +24,65 @@ const AddNote = () => {
 
     return (
         <>
-           <Container>
-      <Row>
-        <Col xs={6}>
-          <h1 className='heading2'>Create a <span style={{ color: 'orange' }}>Note</span></h1>
-          <h5 className='subheading2'>Add a new note with your info</h5>
-          <Form className='form'>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-              <Form.Control size="lg" type="email" placeholder="Title"   value={note.title}
-                                    onChange={onChange}/>
-            </Form.Group>
+            <div className="container mt-2">
+                <div className="row">
+                    <div className="col-md-6">
+                        <h2 style={{ fontWeight: "Bold" }}>Create a <span style={{ color: "darkred", fontWeight: "Bold" }}> Note </span></h2>
+                        <p>Add a new note with your info</p>
+                        <form>
+                            <div className="my-3 material-textfield">
+                                <input
+                                    type="text"
+                                    className="form-control"
+                                    id="title"
+                                    name="title"
+                                    placeholder=" "
+                                    value={note.title}
+                                    onChange={onChange}
+                                />
+                                <label htmlFor="title" className="form-label">
+                                    Title
+                                </label>
+                            </div>
+                            <div className="my-3 material-textfield">
+                                <input
+                                    type="text"
+                                    className="form-control"
+                                    id="tag"
+                                    name="tag"
+                                    placeholder=" "
+                                    value={note.tag}
+                                    onChange={onChange}
+                                />
+                                <label htmlFor="tag" className="form-label">
+                                    Tag
+                                </label>
+                            </div>
+                            <div className="my-3 material-textfield">
+                                <input style={{ height: "70px" }}
+                                    type="text"
+                                    className="form-control"
+                                    id="description"
+                                    name="description"
+                                    placeholder=" "
+                                    value={note.description}
+                                    onChange={onChange}
+                                />
+                                <label htmlFor="description" className="form-label">
+                                    Description
+                                </label>
+                            </div>
 
-            <Form.Group className="mb-3" controlId="formBasicPassword">
-              <Form.Control size="lg" type="password" placeholder="Tag"   value={note.tag}
-                                    onChange={onChange} />
-            </Form.Group>
-
-            <Form.Group className="mb-3" controlId="formBasicPassword">
-              <Form.Control size="lg" type="password" placeholder="Description"  value={note.description}
-                                    onChange={onChange}/>
-            </Form.Group>
-
-            <Button disabled={note.title.length < 3 || note.description.length < 5} onClick={handleClick} size='lg' variant="outline-primary " style={{ marginTop: '20px' }} type="submit">
-              Add a Note
-            </Button>
-          </Form>
-
-        </Col>
-
-        <Col> <img className="img2" src={img2} alt="Logo" /> </Col>
-
-      </Row>
-    </Container>
+                            <button disabled={note.title.length < 3 || note.description.length < 5} type="submit" className="btn btn-lg btn-outline-primary mt-2 mb-3" onClick={handleClick}>
+                                Add Note
+                            </button>
+                        </form>
+                    </div>
+                    <div className="col-lg-5 col-7 d-sm-none  d-md-block ms-5 me-1">
+                        <img className="img-fluid d-none d-sm-block" src={addnoteimg} alt='home' />
+                    </div>
+                </div>
+            </div>
         </>
     )
 }

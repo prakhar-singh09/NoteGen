@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React ,{ useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import alertContext from "../context/Alert/alertContext";
 
@@ -19,7 +19,7 @@ export const Navbar = () => {
       <div className="container-fluid">
         {/* Logo */}
         <Link className="navbar-brand mx-2" to="/">
-          Notespace
+          Notestack
         </Link>
 
         {/* Navbar Toggle Button */}

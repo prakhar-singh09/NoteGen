@@ -1,3 +1,17 @@
+html {
+  scroll-behavior: smooth;
+
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* hero */
+.center {
+  text-align: center;
+}
+
 .heading{
  font-size: 75px;
  align-items: center;  

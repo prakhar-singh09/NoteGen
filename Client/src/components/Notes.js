@@ -55,7 +55,7 @@ const Notes = () => {
 
             {/* Rendering all noteitems */}
             <div className="container container-fluid ">
-                <h2 className="mb-5" style={{ fontWeight: "Bold" }}>Your <span style={{ color: "#9C27B0", fontWeight: "Bold" }}> Notes </span></h2>
+                <h2 className="mb-5" style={{ fontWeight: "Bold" }}>Your <span style={{ color: "darkred", fontWeight: "Bold" }}> Notes </span></h2>
 
                 {/* Checking if there are no notes */}
                 {notes.length === 0 ? (

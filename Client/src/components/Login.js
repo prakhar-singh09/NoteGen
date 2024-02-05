@@ -56,7 +56,7 @@ const Login = () => {
                         <img src={loginimg} alt="" className="img-fluid mb-3 d-none d-md-block" />
                     </div>
                     <div className="col-md-6 col-lg-5 ml-auto">
-                        <h2 className="mb-4" style={{ color: "#9C27B0", fontWeight: "Bold" }}>Log in</h2>
+                        <h2 className="mb-4" style={{ color: "darkred", fontWeight: "Bold" }}>Log in</h2>
                         <form onSubmit={handleSubmit}>
 
                             {/* Email input field */}
