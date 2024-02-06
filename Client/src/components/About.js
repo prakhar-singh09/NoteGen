@@ -10,7 +10,7 @@ const About = () => {
                         <h1 className="display-4 mb-4">Empowering <span style={{ color: "darkred" }} >Students</span> </h1>
                         <p>An online web platform where you can create, edit, upload, delete your notes/information privately and securely without any disturbancee</p>
                         <h2 className="mb-3 my-3" style={{ fontWeight: "Bold" }}>Make something <span style={{ color: "darkred" }}>Awesome</span> </h2>
-                        <p>Notespace is made from the pain of writing all the things in notebook which is very hectic :(, So we made an online web platform where you can create, edit, upload, delete your notes/information privately and securely without any disturbancee.
+                        <p>Notestack is made from the pain of writing all the things in notebook which is very hectic :(, So we made an online web platform where you can create, edit, upload, delete your notes/information privately and securely without any disturbancee.
                             you can also access your notes anywhere in your world, at anytime time . So dont forget to Create note because creating anything is always important
                         </p>
 
@@ -25,7 +25,7 @@ const About = () => {
                 <div className="content">
                     <div className="top">
                         <div className="logo-details">
-                            <span className="logo_name"><span style={{ color: "darkred" }}>Notespace</span></span>
+                            <span className="logo_name"><span style={{ color: "darkred" }}>Notestack</span></span>
                         </div>
                         <div className="media-icons">
                             <Link to="/"><i className="fab fa-facebook-f"></i></Link>
@@ -61,7 +61,7 @@ const About = () => {
                             <li><Link to="/notes">Survivalist Notes</Link></li>
                         </ul>
                         <ul className="box input-box">
-                            <li className="link_name">About Notespace</li>
+                            <li className="link_name">About Notestack</li>
                             <li style={{ color: "#F7FFFF" }}>
                                 An online web platform where you can create, edit, upload, delete your notes/information privately and securely without any disturbance
                             </li>
