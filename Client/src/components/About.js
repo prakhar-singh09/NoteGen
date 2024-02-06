@@ -7,11 +7,13 @@ const About = () => {
          <div className="container my-3">
                 <div className="row">
                     <div className="col-md-6 d-flex flex-column justify-content-center">
-                        <h1 className="display-4 mb-4">Empowering <span style={{ color: "darkred" }} >Students</span> </h1>
-                        <p>An online web platform where you can create, edit, upload, delete your notes/information privately and securely without any disturbancee</p>
-                        <h2 className="mb-3 my-3" style={{ fontWeight: "Bold" }}>Make something <span style={{ color: "darkred" }}>Awesome</span> </h2>
-                        <p>Notestack is made from the pain of writing all the things in notebook which is very hectic :(, So we made an online web platform where you can create, edit, upload, delete your notes/information privately and securely without any disturbancee.
-                            you can also access your notes anywhere in your world, at anytime time . So dont forget to Create note because creating anything is always important
+                        <h1 className="display-4 mb-4">Inspiring<span style={{ color: "darkred" }} > Students</span> </h1>
+                        <p>A secure online platform enabling seamless creation, editing, uploading, and deleting of your notes/information privately and without interruption.</p>
+                        <h2 className="mb-3 my-3" style={{ fontWeight: "Bold" }}>Unleash creativity <span style={{ color: "darkred" }}>NoteStack</span> </h2>
+                        <p>Introducing Notestack, born out of the frustration of scribbling notes in a notebook. Say goodbye to the hassle! 
+                          With our online platform, you can effortlessly create, edit, upload, and delete your notes securely and privately. 
+                          Access your notes anytime, anywhere, without any disruptions. Don&apos;t underestimate the power of creating—start jotting down 
+                          your thoughts with Notestack today!
                         </p>
 
                     </div>
@@ -55,15 +57,15 @@ const About = () => {
                         </ul>
                         <ul className="box">
                             <li className="link_name">Top Categories</li>
-                            <li><Link to="/notes">Tent Notes</Link></li>
-                            <li><Link to="/notes">RV and Van Notes</Link></li>
-                            <li><Link to="/notes">Canoe Notes</Link></li>
-                            <li><Link to="/notes">Survivalist Notes</Link></li>
+                            <li><Link to="/notes">Food Notes</Link></li>
+                            <li><Link to="/notes">Travel Notes</Link></li>
+                            <li><Link to="/notes">Business Notes</Link></li>
+                            <li><Link to="/notes">Iternary Notes</Link></li>
                         </ul>
                         <ul className="box input-box">
                             <li className="link_name">About Notestack</li>
                             <li style={{ color: "#F7FFFF" }}>
-                                An online web platform where you can create, edit, upload, delete your notes/information privately and securely without any disturbance
+                            A secure online platform enabling seamless creation, editing, uploading, and deleting of your notes/information privately and without interruption.
                             </li>
                         </ul>
                     </div>

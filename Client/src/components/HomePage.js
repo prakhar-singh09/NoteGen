@@ -20,7 +20,7 @@ const Home = () => {
                             <h3>Your notebook on cloud - <span style={{ color: "darkred", fontWeight: "bold" }}>Safe</span> &  <span style={{ color: "darkred", fontWeight: "bold" }}>Secure </span>  </h3>
                             <p>
                                 {" "}
-                                An online web platform where you can create, edit, upload, delete your notes/information privately and securely without any disturbance.
+                               A secure online platform enabling seamless creation, editing, uploading, and deleting of your notes/information privately and without interruption.
                             </p>
                         </div>
 
