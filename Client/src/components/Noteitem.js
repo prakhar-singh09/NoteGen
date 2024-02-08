@@ -21,14 +21,15 @@ const NoteItem = (props) => {
                         <div className="d-flex align-items-center">
                             {/* Display the note's title */}
                             <h5 className="card-title me-auto">{note.title}</h5>
+
+                            {/* Button to update the note */}
+                            <i className="fa-solid fa-pen-to-square mx-1 p-2" onClick={() => openNoteUpdateModal(note)} />
                             {/* Button to delete the note */}
-                            <i className="fa-solid fa-trash mx-1 p-2" onClick={() => {
+                            <i className="fa-solid fa-trash-can"  onClick={() => {
                                 deleteNote(note._id);
                                 // Show a success alert after the note is deleted
                                 showAlert('Deleted Note Successfully :)', 'success');
                             }} />
-                            {/* Button to update the note */}
-                            <i className="fa-solid fa-pen-to-square mx-1 p-2" onClick={() => openNoteUpdateModal(note)} />
                         </div>
                     </div>
                     <div className="card-body">

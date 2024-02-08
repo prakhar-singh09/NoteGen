@@ -86,4 +86,4 @@ const AddNote = () => {
         </>
     )
 }
-export default AddNote
+export default AddNote;
