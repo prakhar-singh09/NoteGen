@@ -72,7 +72,7 @@ const About = () => {
                 </div>
                 <div className="bottom-details">
                     <div className="bottom_text">
-                        <span className="copyright_text">Copyright © 2023 <Link to="/">Notespace</Link>All rights reserved</span>
+                        <span className="copyright_text">Copyright © 2024 <Link to="/">Notestack</Link>All rights reserved</span>
                         <span className="policy_terms">
                             <Link to="/">Privacy policy</Link>
                             <Link to="/">Terms & condition</Link>
