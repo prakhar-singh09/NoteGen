@@ -91,7 +91,7 @@ const AddNote = () => {
                                 </label>
                             </div>
 
-                            <button disabled={note.title.length < 3 || note.description.length < 5} type="submit" className="btn btn-lg btn-outline-primary mt-2 mb-3 me-2" onClick={handleClick}>
+                            <button  type="submit" className="btn btn-lg btn-outline-primary mt-2 mb-3 me-2" onClick={handleClick}>
                                 Add Note
                             </button>
                             <button  type="submit" className="btn btn-lg btn-outline-primary mt-2 mb-3 me-2" onClick={generateDescription}>
