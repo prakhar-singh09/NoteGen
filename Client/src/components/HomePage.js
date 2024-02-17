@@ -16,7 +16,7 @@ const Home = () => {
 
                     <div className="col-md-6 d-flex flex-column justify-content-center">
                         <div className="px-5 py-3 align-middle">
-                            <h1 className='display-3 ' style={{ fontWeight: "bold" }}>NoteStack</h1>
+                            <h1 className='display-3 ' style={{ fontWeight: "bold" }}>NoteGen</h1>
                             <h3>Your notebook on cloud - <span style={{ color: "darkred", fontWeight: "bold" }}>Safe</span> &  <span style={{ color: "darkred", fontWeight: "bold" }}>Secure </span>  </h3>
                             <p>
                                 {" "}

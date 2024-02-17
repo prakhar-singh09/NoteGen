@@ -19,7 +19,7 @@ export const Navbar = () => {
       <div className="container-fluid">
         {/* Logo */}
         <Link className="navbar-brand mx-2" to="/">
-          Notestack
+          NoteGen
         </Link>
 
         {/* Navbar Toggle Button */}
