@@ -1,15 +1,16 @@
 # NoteGen App
-This repository contains the code for a Note Generation App built using the MERN stack. The MERN stack includes MongoDB for the database, Express.js for the backend, React.js for the frontend, and Node.js for server-side runtime.
+* This repository contains the code for a Note Generation App built using the MERN stack. The MERN stack includes MongoDB for the database, Express.js for the backend, React.js for the frontend, and Node.js for server-side runtime.
 
 Features:
 
-Create, Read, Update, and Delete (CRUD) operations for efficient note management.
-User-friendly interface built with React.js for a seamless experience.
-Utilizes MongoDB for scalable and flexible data storage.
-Express.js backend for handling API requests and business logic.
-Node.js for server-side runtime, ensuring smooth performance.
-AI-generated content: Additionally, this app incorporates AI-generated content for enhanced note suggestions or auto-completion, leveraging cutting-edge natural language processing techniques.
-Getting Started:
+* Create, Read, Update, and Delete (CRUD) operations for efficient note management.
+* User-friendly interface built with React.js for a seamless experience.
+* Utilizes MongoDB for scalable and flexible data storage.
+* Express.js backend for handling API requests and business logic.
+* Node.js for server-side runtime, ensuring smooth performance.
+* AI-generated content: Additionally, this app incorporates AI-generated content for enhanced note suggestions or auto-completion, leveraging cutting-edge natural language processing techniques.
+
+## Getting Started:
 
 1. Clone this repository.
 2. Navigate to the project directory.
