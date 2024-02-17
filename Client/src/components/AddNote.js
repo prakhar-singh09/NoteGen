@@ -1,5 +1,4 @@
 import React, { useContext, useState } from "react";
-import openai from "openai";
 import NoteContext from "../context/Notes/noteContext";
 import alertContext from "../context/Alert/alertContext";
 import addnoteimg from './assets/img2.svg'
@@ -94,7 +93,7 @@ const AddNote = () => {
                             <button  type="submit" className="btn btn-lg btn-outline-primary mt-2 mb-3 me-2" onClick={handleClick}>
                                 Add Note
                             </button>
-                            <button  type="submit" className="btn btn-lg btn-outline-primary mt-2 mb-3 me-2" onClick={generateDescription}>
+                            <button type="button" className="btn btn-lg btn-outline-primary mt-2 mb-3 me-2" onClick={generateDescription}>
                                 Generate Description
                             </button>
                         </form>
