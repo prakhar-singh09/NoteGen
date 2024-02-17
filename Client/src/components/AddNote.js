@@ -20,9 +20,12 @@ const AddNote = () => {
         showAlert('Added Note Successfully :)', 'success');
     };
 
+      // Store the API endpoint in the host constant
+      const host = process.env.REACT_APP_URL;
+
     const generateDescription = async () => {
         try {
-            const response = await fetch('http://localhost:5600/generate-description', {
+            const response = await fetch(`${host}generate-description`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
