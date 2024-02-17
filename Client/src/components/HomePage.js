@@ -17,11 +17,12 @@ const Home = () => {
                     <div className="col-md-6 d-flex flex-column justify-content-center">
                         <div className="px-5 py-3 align-middle">
                             <h1 className='display-3 ' style={{ fontWeight: "bold" }}>NoteGen</h1>
-                            <h3>Your notebook on cloud - <span style={{ color: "darkred", fontWeight: "bold" }}>Safe</span> &  <span style={{ color: "darkred", fontWeight: "bold" }}>Secure </span>  </h3>
+                            <h3>An AI Enabled Note  <span style={{ color: "darkred", fontWeight: "bold" }}>Generation App</span> </h3>
                             <p>
                                 {" "}
-                               A secure online platform enabling seamless creation, editing, uploading, and deleting of your notes/information privately and without interruption.
-                            </p>
+                          Experience a secure, AI-driven online platform that seamlessly manages your notes and information. 
+                          Create, edit, upload, and delete with ease, free from any interruptions.                   
+                           </p>
                         </div>
 
                         {/* Show Login and SignUp buttons only if the user is not authenticated */}

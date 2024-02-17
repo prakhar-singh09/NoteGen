@@ -10,7 +10,7 @@ connectToMongo();
 const openai = new OpenAI({
     apiKey: apiKey, // This is the default and can be omitted
   });
-  
+
 
 const app = express();
 
@@ -30,7 +30,7 @@ app.use('/api/notes',require('./routes/notes'));
       const response = await openai.chat.completions.create({
         temperature: 0.8,
         max_tokens: 100,
-        messages: [{ role: 'user', content: `Generate a description for a note with title: "${title}"` }],
+        messages: [{ role: 'user', content: `Generate content with title: "${title}"` }],
         model: 'gpt-3.5-turbo',
       });
   
