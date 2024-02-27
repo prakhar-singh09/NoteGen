@@ -4,13 +4,12 @@ const cors = require('cors');
 const {authRoute} = require('./routes/auth');
 const {noteRoute} = require('./routes/notes');
 require('dotenv').config()
-const{ OpenAI} =require('openai');
+const{ OpenAI } = require('openai');
 const apiKey = process.env.OPENAI_API_KEY;
 connectToMongo();
 const openai = new OpenAI({
     apiKey: apiKey, // This is the default and can be omitted
   });
-
 
 const app = express();
 

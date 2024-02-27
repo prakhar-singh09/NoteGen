@@ -1,6 +1,6 @@
 import React from 'react';
 import { useContext, useState } from "react";
-import { Link, useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom";
 import alertContext from "../context/Alert/alertContext";
 import loginimg from './assets/login.svg'
 import { RiEyeFill, RiEyeOffFill } from 'react-icons/ri';

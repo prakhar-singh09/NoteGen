@@ -12,12 +12,13 @@ import Signup from './components/Signup'
 import Alert from './components/Alert';
 import NoteState from './context/Notes/NoteState';
 import AlertState from './context/Alert/AlertState';
-
+import { GoogleOAuthProvider } from '@react-oauth/google';
 
 function App() {
   return (
   <AlertState>
    <NoteState>
+   <GoogleOAuthProvider clientId="823543346606-24qt6end0sl7pj9ag83r6khlab7vrksi.apps.googleusercontent.com">
     <Router>
       <Navbar />
       <Alert/>
@@ -29,6 +30,7 @@ function App() {
         <Route path="/Signup" element={<Signup />} />        
       </Routes>
     </Router>
+   </GoogleOAuthProvider>
     </NoteState>
   </AlertState>
   );

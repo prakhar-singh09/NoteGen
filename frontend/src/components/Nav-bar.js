@@ -56,7 +56,7 @@ export const Navbar = () => {
 
           {/* Logout Button (only if user is authenticated) */}
           {localStorage.getItem('token') && <div className="d-flex ms-auto me-2">
-            <button className="btn btn-outline-primary" onClick={handleLogout}  >Logout</button>
+            <button className="btn btn-outline-danger" onClick={handleLogout}  >Logout</button>
           </div>}
         </div>
       </div>
