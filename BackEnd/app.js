@@ -33,7 +33,6 @@ app.use('/api/notes',require('./routes/notes'));
         model: 'gpt-3.5-turbo',
       });
   
-      console.log('OpenAI Response:', response);
       const generatedDescription = response.choices[0].message.content;
       res.json({ description: generatedDescription });
     } catch (error) {
