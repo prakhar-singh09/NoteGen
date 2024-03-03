@@ -1,6 +1,7 @@
 import React ,{ useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import alertContext from "../context/Alert/alertContext";
+import logo from "./assets/github-mark.svg"; 
 
 export const Navbar = () => {
   let navigate = useNavigate();
@@ -21,6 +22,8 @@ export const Navbar = () => {
         <Link className="navbar-brand mx-2" to="/">
           NoteGen
         </Link>
+
+      
 
         {/* Navbar Toggle Button */}
         <button
@@ -52,12 +55,22 @@ export const Navbar = () => {
             <Link className={`nav-link  ${location.pathname === '/about' ? "active" : ""}`} to="/about">
               About us
             </Link>
+
           </div>
+
+
 
           {/* Logout Button (only if user is authenticated) */}
           {localStorage.getItem('token') && <div className="d-flex ms-auto me-2">
             <button className="btn btn-outline-danger" onClick={handleLogout}  >Logout</button>
           </div>}
+
+          {!localStorage.getItem('token') && <div className="d-flex ms-auto me-3">
+            <Link to="https://github.com/prakhar-singh09/NoteGen" target="_blank">
+            <img src={logo} alt="Brand Logo" style={{ width: "40px", height: "auto" }} />
+          </Link>
+        </div>}
+
         </div>
       </div>
     </nav>
