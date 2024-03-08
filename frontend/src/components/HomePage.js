@@ -39,7 +39,7 @@ const Home = () => {
 
                     <div className="col-md-6 d-flex flex-column justify-content-center">
                         <div className="px-5 py-3 align-middle">
-                            <h1 className='display-3 ' style={{ fontWeight: "bold" }}>NoteGen</h1>
+                            <h1 className='display-3 ' style={{ fontWeight: "revert-layer" }}>NoteGen</h1>
                             <h3>An AI Enabled Note  <span style={{ color: "darkred", fontWeight: "bold" }}>Generation App</span> </h3>
                             <p>
                                 {" "}

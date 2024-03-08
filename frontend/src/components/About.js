@@ -9,7 +9,7 @@ const About = () => {
                     <div className="col-md-6 d-flex flex-column justify-content-center">
                         <h1 className="display-4 mb-4">Inspiring<span style={{ color: "darkred" }} > Students</span> </h1>
                         <p>A secure online platform enabling seamless creation, editing, uploading, and deleting of your notes/information privately and without interruption.</p>
-                        <h2 className="mb-3 my-3" style={{ fontWeight: "Bold" }}>Unleash creativity <span style={{ color: "darkred" }}>NoteGen</span> </h2>
+                        <h2 className="mb-3 my-3" style={{ fontWeight: "revert-layer" }}>Unleash creativity <span style={{ color: "darkred" }}>NoteGen</span> </h2>
                         <p>Introducing NoteGen, born out of the frustration of scribbling notes in a notebook. Say goodbye to the hassle! 
                           With our online platform, you can effortlessly create, edit, upload, and delete your notes securely and privately. 
                           Access your notes anytime, anywhere, without any disruptions. Don&apos;t underestimate the power of creating—start jotting down 
