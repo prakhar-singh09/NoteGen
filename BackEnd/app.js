@@ -5,6 +5,8 @@ const {authRoute} = require('./routes/auth');
 const {noteRoute} = require('./routes/notes');
 require('dotenv').config()
 const{ OpenAI } = require('openai');
+const os = require("os");
+
 const apiKey = process.env.OPENAI_API_KEY;
 connectToMongo();
 const openai = new OpenAI({
@@ -16,6 +18,10 @@ const app = express();
 app.use(cors());
 
 app.use(express.json());
+
+
+const total = os.cpus().length;
+console.log(total);
 
 app.use('/api/auth',require('./routes/auth'));
 app.use('/api/notes',require('./routes/notes'));
