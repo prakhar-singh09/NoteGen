@@ -1,6 +1,9 @@
 # NoteGen App
 This repository contains the code for a Note Generation App built using the MERN stack and OpenAI.
 
+## Home Page
+![image](https://github.com/prakhar-singh09/NoteGen/blob/main/frontend/src/components/assets/Feature.png)
+
 ## Features
 
 * Create, Read, Update, and Delete (CRUD) operations for efficient note management.
