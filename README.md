@@ -1,5 +1,5 @@
 # NoteGen App
-This repository contains the code for a Note Generation App built using the MERN stack and OpenAI.
+This repository contains the code for a Note Generation App built using the MERN stack and OpenAI's ChatGPT.
 
 ## Home Page
 ![image](https://github.com/prakhar-singh09/NoteGen/blob/main/frontend/src/components/assets/FeatureImg.png)
