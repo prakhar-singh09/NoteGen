@@ -1,10 +1,10 @@
-import React ,{ useContext, useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import NoteContext from "../context/Notes/noteContext";
 import alertContext from "../context/Alert/alertContext";
 import AddNote from "./AddNote";
 import Noteitem from "./Noteitem";
 import { useNavigate } from "react-router-dom";
-import nonoteimg from './assets/nonote.svg'
+import nonoteimg from './assets/nonote.svg';
 
 const Notes = () => {
     const ref = useRef(null); // Ref to launch modal
@@ -15,66 +15,105 @@ const Notes = () => {
     const { showAlert } = useContext(alertContext);
     const { notes, getNotes, editNote } = useContext(NoteContext);
     const [note, setNote] = useState({ id: "", etitle: "", edescription: "", etag: "" }); // State for the note being edited
+    const [searchQuery, setSearchQuery] = useState(""); // State for the search query
+    const [filteredNotes, setFilteredNotes] = useState([]); // State for filtered notes
 
     useEffect(() => {
         // Checking if user is logged in by checking for a token in local storage
         if (localStorage.getItem('token')) {
-            console.log(localStorage.getItem('token'));
+           
             getNotes();
         }
         else {
             // Redirecting to login page if user is not logged in
+         
             navigate('/');
         }
         // eslint-disable-next-line
-    }, [])
+    }, []);
 
     // Function to handle changes in the input fields
     const onChange = (e) => {
-        setNote({ ...note, [e.target.name]: e.target.value })
-    }
+        setNote({ ...note, [e.target.name]: e.target.value });
+    };
 
     // Function to update the note being edited in state and launch the modal
     const openNoteUpdateModal = (currNote) => {
         ref.current.click();
         setNote({ id: currNote._id, etitle: currNote.title, edescription: currNote.description, etag: currNote.tag });
-    }
+    };
 
     /* Function to handle click on the Update Note button in the modal
        This function calls the editNote function to update the note on the backend. */
     const updateNoteOnBackend = () => {
         editNote(note.id, note.etitle, note.edescription, note.etag);
         refclose.current.click(); // Closing the modal
-        showAlert('Updated Note Successfully :)', 'success') // Showing a success alert
-    }
+        showAlert('Updated Note Successfully :)', 'success'); // Showing a success alert
+    };
+
+    // Function to handle search
+    const handleSearch = (e) => {
+        const query = e.target.value.trim(); // Get the search query from the event
+        
+        setSearchQuery(query); // Update the state with the search query
+    };
+
+    useEffect(() => {
+            // Filter notes based on search query
+            const filtered = notes.filter(note => {
+                const titleMatch = note.title && note.title.toLowerCase().includes(searchQuery.toLowerCase());
+                const descriptionMatch = note.description && note.description.toLowerCase().includes(searchQuery.toLowerCase());
+                const tagMatch = note.tag && note.tag.toLowerCase().includes(searchQuery.toLowerCase());
+            
+                return titleMatch || descriptionMatch || tagMatch;
+            });
+            
+        
+       
+            setFilteredNotes(filtered);
+        }, [searchQuery, notes]);
+        
+
+
 
     return (
         <>
             {/* Component to add a new note*/}
-            <AddNote />
+            <AddNote /> 
+         {/* Search input field */}
+<div className="mb-3 d-flex justify-content-end" style={{ paddingRight: '40%' }}>
+    <input
+        type="text"
+        className="form-control form-control-sm"
+        placeholder="Search notes..."
+        value={searchQuery}
+        onChange={handleSearch} // Bind the handleSearch function to the onChange event
+        style={{ maxWidth: "200px" }} // Adjust the maximum width of the input
+    />
+</div>
+{/* Rendering all noteitems */}
+<div className="container container-fluid ">
+    <h2 className="mb-5" style={{ fontWeight: "Bold" }}>Your <span style={{ color: "darkred", fontWeight: "Bold" }}> Notes </span></h2>
 
-            {/* Rendering all noteitems */}
-            <div className="container container-fluid ">
-                <h2 className="mb-5" style={{ fontWeight: "Bold" }}>Your <span style={{ color: "darkred", fontWeight: "Bold" }}> Notes </span></h2>
-
-                {/* Checking if there are no notes */}
-                {notes.length === 0 ? (
-                    <div style={{ display: "flex", alignItems: "center" }}>
-                        <img style={{ width: "15%", marginRight: "1rem" }} src={nonoteimg} alt="no-notes-to-show" />
-                        <h3 style={{ fontSize: "1.5rem", fontWeight: "bold", color: "#333" }}>Add Your First Note :)</h3>
-                    </div>
-                ) : (
-                    <div className="card-body">
-                        <div className="row my-3">
-                            {/* Rendering all the notes */}
-                            {notes.map((note) => (
-                                <Noteitem key={note._id} note={note} openNoteUpdateModal={openNoteUpdateModal} />
-                            ))}
-                        </div>
-                    </div>
-                )}
+    {/* Checking if there are no notes */}
+    {notes.length === 0 ? (
+        <div style={{ display: "flex", alignItems: "center" }}>
+            <img style={{ width: "15%", marginRight: "1rem" }} src={nonoteimg} alt="no-notes-to-show" />
+            <h3 style={{ fontSize: "1.5rem", fontWeight: "bold", color: "#333" }}>Add Your First Note :)</h3>
+        </div>
+    ) : (
+        <div className="card-body">
+            <div className="row my-3">
+                {/* Rendering all the notes or filtered notes based on search */}
+                {(searchQuery === '' ? notes : filteredNotes).map((note) => (
+                    <Noteitem key={note._id} note={note} openNoteUpdateModal={openNoteUpdateModal} />
+                ))}
             </div>
+        </div>
+    )}
+</div>
 
+           
             {/* Modal  */}
             <button
                 ref={ref}
@@ -168,6 +207,7 @@ const Notes = () => {
             </div>
 
         </>
-    )
-}
-export default Notes
+    );
+};
+
+export default Notes;
