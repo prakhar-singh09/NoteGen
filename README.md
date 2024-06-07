@@ -5,8 +5,6 @@
    💻 NoteGen
 </h1>
 
-
-
 ## ⚡Technology Stack
 
 ### [NodeJS](https://nodejs.org/)
@@ -14,7 +12,8 @@
 ### [Express](http://expressjs.com/)
 ### [ReactJS](https://react.dev/)
 
-## Features
+
+## 👨‍💻Features
 
 - Create, Read, Update, and Delete (CRUD) operations for efficient note management.
 - User-friendly interface built with React.js for a seamless experience.
@@ -229,8 +228,8 @@ DELETE /api/notes/deletenote/:id
 ![image](https://github.com/prakhar-singh09/NoteGen/blob/main/frontend/src/components/assets/FeatureImg.png)
 
 
-Contributing:
+### Contribution
 Contributions are welcome! Feel free to submit issues or pull requests.
 
-License:
+### License
 This project is licensed under the MIT License.
