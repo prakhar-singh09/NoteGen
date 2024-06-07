@@ -33,7 +33,7 @@ git clone https://github.com/prakhar-singh09/NoteGen.git
 ```
 ### FrontEnd
 
-Go to the project directory
+Go to the frontend directory
 
 ```bash
 cd frontend
