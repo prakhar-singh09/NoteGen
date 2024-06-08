@@ -3,6 +3,7 @@
 
 <h1 align="center">
    💻 NoteGen
+   
 </h1>
 
 ## ⚡Technology Stack
